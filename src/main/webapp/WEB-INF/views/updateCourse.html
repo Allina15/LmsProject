@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>update</title>
+</head>
+<body>
+<form th:method="PUT" th:action="@{/company/courses/{id}(id=${newCourse.getId()})}" th:object="${newCourse}">
+    <div class="mb-3">
+        <label for="name" class="form-label">name</label>
+        <input th:field ="*{courseName}" type="text" class="form-control" id="name" >
+    </div>
+    <div class="mb-3">
+        <label for="image" class="form-label">Image</label>
+        <input th:field="*{image}" type="text" class="form-control" id="image">
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <input th:field="*{description}" type="text" class="form-control" id="description">
+    </div>
+    <div class="mb-3">
+        <label for="duration" class="form-label">duration</label>
+        <input th:field="*{duration}" type="text" class="form-control" id="duration">
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+</body>
+</html>
